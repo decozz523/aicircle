@@ -22,7 +22,7 @@ export default async function handler(req, res) {
         'X-Title': 'AI Circle'
       },
       body: JSON.stringify({
-        model: "google/gemma-2-2b-it", // или любой другой, например "meta-llama/llama-3.1-8b-instruct"
+        model: "qwen/qwen3-235b-a22b:free", // или любой другой, например "meta-llama/llama-3.1-8b-instruct"
         messages: [{ role: "user", content: prompt }]
       })
     });
@@ -41,4 +41,5 @@ export default async function handler(req, res) {
     console.error('Server error:', error);
     res.status(500).json({ error: 'Ошибка сервера' });
   }
+
 }
